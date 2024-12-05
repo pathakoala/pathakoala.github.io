@@ -1,0 +1,133 @@
+h1 {
+    text-align: center;
+    color:rgb(22, 252, 164);
+}
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(26, 159, 248);
+}
+
+.section1{
+    background-color:rgb(124, 35, 35);
+    padding:30px;
+}
+.header {
+    text-align: center;
+    color:  rgb(22, 252, 164);
+}
+
+a {
+    text-decoration: none;
+    color:  rgb(22, 252, 164);
+    font-size: 1.5em;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.nav-bar > h1 {
+    display: none;
+}
+
+.image-grid-container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 80%;
+    grid-gap: 2% 2%;
+    margin: auto;
+}
+.image-grid-container2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 80%;
+    grid-gap: 2% 2%;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+    height:auto;
+}
+
+.image-grid-item {
+    position: relative;
+    overflow:hidden;
+    border-radius: 10px;
+}
+.image-grid-items {
+    position: relative;
+    overflow:hidden;
+    border-radius:0px;
+    transition: border-radius 0.5s ease;    
+}
+
+.overlay {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+    width: 100%;
+    color: white;
+    font-size: 1em;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    transition: border-radius 0.5s ease;
+    background-color: rgb(22, 252, 164);
+}
+
+.image-grid-item:hover .overlay {
+    opacity: 1;
+    border-radius:30px;
+}
+.image-grid-items:hover .overlay {
+    opacity: 1;
+    border-radius:30px;
+}
+
+
+    .nav-bar {
+        background-color: rgb(27, 255, 167);
+        opacity: 0%;
+        position: absolute;
+        top: 0px;
+        flex-direction: column;
+        color: white;
+        height: 100%;
+        width: 0%;
+        justify-content: center;
+        align-items: center;
+        transition: width 1s ease-out, opacity 0s ease-out;
+    }
+
+   
+
+    a {
+        color: white;
+    }
+
+    .image-grid {
+        grid-template-columns: 100%;
+    }
+
+    @media (max-width: 600px) {
+        .nav-bar > a {
+            display: block;
+        }
+        .image-grid-container {
+            grid-template-columns: 100%;
+        }
+        .image-grid-container2 {
+            grid-template-columns: 100%;
+        }
+    }
+    
+    .nav-bar:hover {
+        width: 20%;
+        opacity: 100%;
+    }
+   
